@@ -1,0 +1,14 @@
+# Ignore everything by default
+*
+
+# Keep TeX and PDF files
+!*.tex
+!*.pdf
+
+# Keep the Fonts directory and all its contents
+!Fonts/
+!Fonts/**
+
+# Keep the .gitignore file itself
+!.gitignore
+

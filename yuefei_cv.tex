@@ -1,0 +1,148 @@
+%-------------------------------------
+% Resume in LaTeX (XeLaTeX)
+% Author:  HF Yuan
+% Project: https://github.com/xyz-yuanhf/yuan-resume
+% Base on: https://github.com/mattyHerzig/mattys_resume
+%          http://www.jianxu.net/en/
+% License: MIT
+%------------------------------------
+
+\documentclass[a4paper, 10pt]{article}
+\usepackage{myresume}  % Style package
+
+% --------------------  START  --------------------
+\begin{document}
+
+% -------------------- HEADING --------------------
+\begin{flushright} 
+    \setstretch{0.6}
+    \item {\faGraduationCap\ \, \href{https://scholar.google.ca/citations?view_op=list_works&hl=en&user=AYYyliAAAAAJ}{\textcolor{myblue}{Google Scholar}}} % Scholar
+    \item {\faPhone\ \, \textcolor{myblue}{(+1) 647-866-7311}} % Phone number 
+    \item {\faEnvelope\ \, \textcolor{myblue}{yuefei9943@gmail.com}} % E-mail address 
+    \item {\faGithub\ \, \href{https://github.com/YueFei0403}{\textcolor{myblue}{github.com/YueFei0403}}} % GitHub
+\end{flushright}\vspace{-45pt} 
+\begin{flushleft} % Rplace here with your name (and identity if required) 
+    {\Calluna \fontsize{30pt}{30pt}\selectfont \textsc{Yue Fei}} \quad 
+    {\Calluna \fontsize{14.5pt}{14.5pt}\selectfont \textsc{she/her}} 
+    \noindent\rule{\textwidth}{0.4pt} 
+\end{flushleft}
+
+% -------------------- EDUCATION --------------------
+\sectionBlock{
+\section{Education}
+}{
+
+\eduHeading
+  {University of Toronto, Toronto, Canada}
+  {Master of Engineering, Electrical Engineering}
+  {Sep. 2022 -- Jun. 2024}
+\itemListStart
+  \myItem{Emphasis: Communications}
+  \myItem{Advisor: \href{https://www.comm.utoronto.ca/~rsadve/}{Prof. Raviraj Adve}}
+  \myItem{MEng Thesis: “\href{https://github.com/YueFei0403/UMa_5G_AoA}{Pilot Training - Angle of Arrival and Channel Estimation in 5G
+Network}”}
+\itemListEnd
+
+\eduHeading
+  {University of Toronto, Toronto, Canada}  
+  {Bachelor of Applied Science, Electrical Engineering}
+  {Sep. 2017 -- Jun. 2022}
+\itemListStart
+  \myItem{Capstone Project: Convolutional neural network NPU Overlay (MobileNetV1) for FPGA (Intel Stratix 10)}
+  \myItem{Advisors: \href{https://www.eecg.utoronto.ca/~vaughn/}{Prof. Vaughn Betz} and \href{https://andrewboutros.github.io/}{Andrew Boutros}}
+\itemListEnd
+
+}
+
+% -------------------- PUBLICATIONS --------------------
+\sectionBlock{
+\section{Publications\\(Peer-Reviewed Conference)}
+}{
+\pubListStart
+\justifying
+\item Arash Ahmadian, Louis S.P. Liu, \textbf{Yue Fei}, Konstantinos N. Plataniotis; Mahdi S. Hosseini. Pseudo-Inverted Bottleneck Convolution for Darts Search Space. \textit{IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 2023.
+\item Abnash Bassi, \textbf{Yue Fei}, Gilead Posluns, Mark C. Jeffrey. Optimized Priority Scheduling for Faster Scalable Belief Propagation. \textit{The Association for the Advancement of Artificial Intelligence (AAAI) [In Submission]}, 2026.
+\pubListEnd
+}
+
+% -------------------- AWARDS & HONORS --------------------
+\sectionBlock{
+\section{Awards and Honors}
+}{
+\awardListStart
+\justifying
+\item \emph{Dean's Honour List}  \hfill 2017 Fall, 2018 Winter, 2018 Fall, 2021 Fall, \& 2022 Winter
+\item \emph{Edward S. Rogers Sr. Department Betz Entrance Scholarship (\$5,000)} \hfill 2017
+\awardListEnd
+}
+
+% -------------------- Certificate --------------------
+\sectionBlock{
+\section{Certificate}
+}{
+\certificateListStart
+\justifying
+\item \emph{Certificate in Engineering Business}  \hfill Jun. 2022
+\certificateListEnd
+}
+
+% -------------------- INDUSTRY EXPERIENCE --------------------
+\sectionBlock{
+\section{Industry Experience}
+}{
+\jobHeading
+  {Qualcomm}{Markham, Canada}{Jun. 2024 -- Jul. 2025}
+\itemListStart
+  \myItem{Verified \textbf{UWB} receiver path and improved startup performance by reducing LNA charging delay \textbf{90\%} ($20$ns $\rightarrow$ $2$ns).”}
+  \myItem{Validated \textbf{WLAN CP-PLL synthesizer} loop and built \textbf{UVM}-compatible test plans spanning 500+ channel indices, ensuring robust coverage across 2G, 5G, and emerging 5G alternative bands.}
+  \myItem{Developed \textbf{multi-head GRU-based RNN} for receiver gain line-up optimization, where each head learns one analog block (LNA, GM, TIA, BQ, PGA). Transformed a complex combinatorial tuning problem into a scalable learning-based approach, easing designer effort.}
+  \myItem{Built a physics-inspired \textbf{MLP} that predicts \textbf{VCO} capacitance from control inputs, removing the need for RF/analog designers to manually tune capacitors for $1000+$ frequency targets.}
+\itemListEnd
+\jobHeading
+  {Alphawave Semi}{Toronto, Canada}{May 2020 -- Jun. 2021}
+\itemListStart
+  \myItem{Developed \textbf{UVM} testbenches to verify \textbf{SerDes} (clocking, datapath, \textbf{SRAM}), expanding functional coverage across \textbf{50+ scenarios}.}
+  \myItem{Enhanced CI/CD automation to support \textbf{10× growth} in regression testing (scaling from \textbf{4 to 40+ projects}), improving efficiency and reliability as the company expanded.}
+\itemListEnd
+}
+
+
+% -------------------- PROJECTS --------------------
+\sectionBlock{
+\section{Projects}
+}{
+\projHeading
+{\textbf{Advanced Optimization Techniques for Smart Grid Management}}
+{National Natural Science Foundation of China (NSFC)} {2023.01 - 2024.01}
+
+\projHeading
+{\textbf{Optimizing Urban Traffic Flow Using AI-Based Predictive Models}}
+{Smart Transportation Innovations Grant} {2021.12 - 2022.12}.
+}
+
+
+% -------------------- SKILLS --------------------
+\sectionBlock{
+\section{Skills}
+}{
+\skillListStart
+\justifying
+\item \emph{Languages}: Chinese (Mandarin), English, French.
+\item \emph{Programming}: {\Courier \fontsize{11pt}{11pt}\selectfont Python}, {\Courier \fontsize{11pt}{11pt}\selectfont C++}, {\Courier \fontsize{11pt}{11pt}\selectfont MATLAB}.
+\skillListEnd
+}
+
+% -------------------- OTHERS --------------------
+\sectionBlock{
+\section{Academic Services}
+}{
+\skillListStart
+\justifying
+\item \emph{Reviewers for}: \textit{Journal of Operations Research and Optimization},
+\item \phantom{\emph{Reviewers for}:} \textit{International Conference on Optimization and Machine Learning},
+\item \phantom{\emph{Reviewers for}:} \;...
+\skillListEnd
+}
+
+\end{document}
+
