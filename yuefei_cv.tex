@@ -108,10 +108,10 @@ Network}”}
 \section{Technical Skills}
 }{
 \skillListStart
-  \item \textbf{Programming:} Python (\textbf{Pandas} for SQL-style joins, group-by aggregation, filtering), C/C++, MATLAB, Julia, Arm Assembly, Perl
-  \item \textbf{Data Processing \& Automation:} Built Pandas-based pipelines to organize large IC/IP regression suites, \textbf{enabling same-day dashboards vs.\ 1–2-day manual consolidation}; Makefile-driven build/test flows; CI/CD (Jenkins)
-  \item \textbf{ML / Optimization:} PyTorch, GRU-RNN, MLP, Convex Optimization (fractional \& quadratic-transform methods), Sampling-based Source Coding
-  \item \textbf{Hardware / HPC:} FPGA (Intel Stratix-10), Intel SIMD Intrinsics, Parallel Programming (OpenMP-style), UVM, Verilog/SystemVerilog, Cadence Virtuoso, Slurm for ComputeCanada clusters
+  \item \textbf{Programming:} Python (\textbf{Pandas} for SQL-style joins, group-by aggregation, filtering to process CSV files), C/C++, MATLAB, Julia, Arm Assembly, Perl
+  \item \textbf{Data Processing \& Automation:} Built  CI/CD (Jenkins) pipelines to organize large IC/IP regression suites, \textbf{enabling same-day dashboards vs.\ 1–2-day manual consolidation}; Makefile-driven build/test flows;
+  \item \textbf{ML / Optimization:} PyTorch, GRU-RNN, MLP, Attention Mechanism, Convex Optimization (fractional \& quadratic-transform methods), Sampling-based Source Coding
+  \item \textbf{Parallel Programming:} Experience with \textbf{multithreading} (OpenMP-style parallel loops, SIMD intrinsics, custom thread management) and \textbf{multi-queue scheduling} strategies for scalable workload distribution.
   \item \textbf{Tools \& Environments:} Git, Linux/Unix shells, Vim/GVim, Mur$\Phi$ Model Checker, SimpleScalar simulators
 \skillListEnd
 }
@@ -189,14 +189,10 @@ Network}”}
 {\textbf{Parallel \& HPC}\\[-2pt]
 \scriptsize Multi-threaded acceleration and memory-coherence design}
 }{
-\projHeading{Parallel Ultrasound Beamforming}{Jan. 2024 -- May. 2024}
+\projHeading{Parallel Beamforming \& Cache-Coherence Foundations for Scalable Compute}{Jan. 2024 -- May. 2024}
 \itemListStart
-  \myItem{Accelerated medical-imaging by \textbf{$7×$} (17 $\rightarrow$ 2.5 seconds) via \textbf{16-thread parallelization}, SIMD intrinsics, and memory optimizations (\texttt{restrict}, single-write); validated correctness (RMS error < 1e-16) and scalability (1–16 threads).}
-\itemListEnd
-
-\projHeading{Cache-Coherence Protocol Design \& Verification}{Jan. 2024 -- May. 2024}
-\itemListStart
-  \myItem{Designed and verified a \textbf{3-hop directory protocol} (MSI/MESI) in Murϕ; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions (0 memory overhead vs 80 MB baseline); formalized \textbf{7 invariants} (e.g., single-writer ownership) and FSM edge-case handling.}
+  \myItem{Accelerated medical-imaging by \textbf{7×} (17 s → 2.5 s) via \textbf{16-thread data-parallel} ultrasound beamforming with SIMD intrinsics and memory optimizations (\texttt{restrict}, single-write); validated correctness (RMS error < 1e-16) and scalability (1–16 threads) — a paradigm relevant to \textbf{data-parallel LLM training}.}
+  \myItem{Designed and verified a \textbf{3-hop directory cache-coherence protocol} (MSI/MESI) in Murϕ; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions (\textbf{0 MB} overhead vs 80 MB baseline), formalized \textbf{7 invariants} (e.g., single-writer ownership), and handled FSM edge-case scenarios for large-scale shared-memory systems.}
 \itemListEnd
 }
 
@@ -223,7 +219,7 @@ Network}”}
 }{
 \projHeading{Computer Architecture Coursework}{Sep. 2021 -- Dec. 2021}
 \itemListStart
-  \myItem{Implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; the \textbf{speculation mechanisms} are conceptually aligned with today’s \textbf{LLM speculative decoding} techniques for faster inference.}
+  \myItem{Developed a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding}, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
 \itemListEnd
 }
 
