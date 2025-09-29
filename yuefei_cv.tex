@@ -57,7 +57,7 @@ Network}”}
   {Bachelor of Applied Science, Electrical Engineering}
   {Sep. 2017 -- Jun. 2022}
 \itemListStart
-  \myItem{Capstone Project: Convolutional neural network NPU Overlay (MobileNetV1) for FPGA (Intel Stratix 10 NX 2100)}
+  \myItem{Capstone Project: Convolutional Neural Network (\textbf{CNN}) NPU Overlay (MobileNetV1) for FPGA (Intel Stratix 10 NX 2100)}
   \myItem{Advisors: \href{https://www.eecg.utoronto.ca/~vaughn/}{Prof. Vaughn Betz} and \href{https://andrewboutros.github.io/}{Andrew Boutros}}
 \itemListEnd
 }
@@ -68,8 +68,8 @@ Network}”}
 }{
 \pubListStart
 \justifying
-\item Arash Ahmadian, Louis S.P. Liu, \textbf{Yue Fei}, Konstantinos N. Plataniotis; Mahdi S. Hosseini. Pseudo-Inverted Bottleneck Convolution for Darts Search Space. \textit{IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 2023.
-\item Abnash Bassi, \textbf{Yue Fei}, Gilead Posluns, Mark C. Jeffrey. Optimized Priority Scheduling for Faster Scalable Belief Propagation. \textit{The Association for the Advancement of Artificial Intelligence (AAAI) [In Submission]}, 2026.
+\item Arash Ahmadian, Louis S.P. Liu, \underline{\textbf{Yue Fei}}, Konstantinos N. Plataniotis; Mahdi S. Hosseini. Pseudo-Inverted Bottleneck Convolution for Darts Search Space. \textit{IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 2023.
+\item Abnash Bassi, \underline{\textbf{Yue Fei}}, Gilead Posluns, Mark C. Jeffrey. Optimized Priority Scheduling for Faster Scalable Belief Propagation. \textit{The Association for the Advancement of Artificial Intelligence (AAAI) [In Submission]}, 2026.
 \pubListEnd
 }
 
@@ -111,9 +111,9 @@ Network}”}
 \skillListStart
 \item \textbf{Programming:} Python (\textbf{Pandas} for SQL-style data joins), C/C++, MATLAB, Julia, Arm Assembly, Perl
 \item \textbf{Data Processing \& Automation:} CI/CD (Jenkins) pipelines for large IC/IP regressions — \textbf{enabled same-day dashboards vs.\ 1–2-day manual}; Makefile-based build/test flows
-\item \textbf{ML \& Optimization:} PyTorch, GRU-RNN, MLP, Attention mechanism, Q-Learning (Reinforcement Learning), Convex Optimization (fractional \& quadratic-transform), Sampling-based Source Coding
+\item \textbf{ML \& Optimization:} PyTorch, GRU-RNN, MLP, Attention mechanism \& visualization \href{https://github.com/YueFei0403/attn_nmt_visualize/blob/main/Final_Report_2021_08_30.pdf}{[Code]}, Q-Learning (Reinforcement Learning), Convex Optimization (fractional \& quadratic-transform), Sampling-based Source Coding
 \item \textbf{Parallel Programming:} \textbf{Multithreading} (OpenMP-style loops, SIMD), custom thread mgmt, \textbf{multi-queue scheduling} for scalable workloads
-\item \textbf{Tools \& Environments:} Git, Linux/Unix shells, Vim/GVim, Mur$\Phi$ Model Checker, SimpleScalar simulators
+\item \textbf{Tools \& Environments:} Git, Linux/Unix shells, Vim/GVim, Mur$\phi$ Model Checker, SimpleScalar simulators
 
 \skillListEnd
 }
@@ -129,7 +129,7 @@ Network}”}
   \myItem{Verified \textbf{UWB} receiver path and improved startup performance by reducing LNA charging delay \textbf{90\%} ($20$ns $\rightarrow$ $2$ns).”}
   \myItem{Validated \textbf{WLAN CP-PLL synthesizer} loop and built \textbf{UVM}-compatible test plans spanning 500+ channel indices, ensuring robust coverage across 2G, 5G, and emerging 5G alternative bands.}
   \myItem{Developed \textbf{multi-head GRU-based RNN} for receiver gain line-up optimization, where each head learns one analog block (LNA, GM, TIA, BQ, PGA). Transformed a complex combinatorial tuning problem into a scalable learning-based approach, easing designer effort.}
-  \myItem{Built a physics-inspired \textbf{MLP} that predicts \textbf{VCO} capacitance from control inputs, removing the need for RF/analog designers to manually tune capacitors for $1000+$ frequency targets.}
+  \myItem{Built a physics-inspired \textbf{MLP} (\textit{customized activation function + Pre-Normalization + Post-Normalization}) that predicts \textbf{VCO} capacitance from control inputs, removing the need for RF/analog designers to manually tune capacitors for $1000+$ frequency targets.}
 \itemListEnd
 \jobHeading
   {Alphawave Semi - Digital Verification Engineer}{Toronto, Canada}{May 2020 -- Jun. 2021}
@@ -160,12 +160,12 @@ Network}”}
 
 \projHeading{Sampling-Based Semantic Source Coding (One-Shot Info Theory)}{Jan. 2023 -- May. 2023}
 \itemListStart
-  \myItem{Implemented \textbf{Poisson functional representation}, \textbf{rejection sampling}, \textbf{importance sampling}, and hybrid Poisson\,+\,dithered-quantization for 6G semantic source-coding in MATLAB.}
+  \myItem{Implemented \textbf{Poisson functional representation}, \textbf{rejection sampling}, \textbf{importance sampling}, and hybrid Poisson\,+\,dithered-quantization for 6G semantic source-coding in MATLAB.}\href{https://github.com/YueFei0403/ECE1508-OneShotInfoTheory/tree/main}{[Code]}
 \itemListEnd
 
 \projHeading{Transformer \& Embedding Visualization (Research Assistant)}{Jul. 2021 -- Sep. 2021}
 \itemListStart
-  \myItem{Explored \textbf{RNN-based Transformer models} and \textbf{Attention mechanisms} for NLP tasks.}
+  \myItem{Explored \textbf{RNN-based Transformer models} and \textbf{Attention mechanisms} for NLP tasks .}
   \myItem{Applied \textbf{PCA-based embedding visualization}—as used in \textbf{GloVe}—to project high-dimensional embeddings into \textbf{2D/3D space} using \textbf{Python (NumPy, Matplotlib)}, enabling intuitive inspection of semantic clusters.}
 \itemListEnd
 }
@@ -193,8 +193,8 @@ Network}”}
 }{
 \projHeading{Parallel Beamforming \& Cache-Coherence Foundations for Scalable Compute}{Jan. 2024 -- May. 2024}
 \itemListStart
-  \myItem{Accelerated medical-imaging by \textbf{7×} (17 s $\rightarrow$ 2.5 s) via \textbf{16-thread data-parallel} ultrasound beamforming with SIMD intrinsics and memory optimizations (\texttt{restrict}, single-write); validated correctness (RMS error < 1e-16) and scalability (1–16 threads) — a paradigm relevant to \textbf{data-parallel LLM training}.}
-  \myItem{Designed and verified a \textbf{3-hop directory cache-coherence protocol} (MSI/MESI) in Murϕ; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions (\textbf{0 MB} overhead vs 80 MB baseline), formalized \textbf{7 invariants} (e.g., single-writer ownership), and handled FSM edge-case scenarios for large-scale shared-memory systems.}
+  \myItem{Accelerated medical-imaging by \textbf{7×} (17 s $\rightarrow$ 2.5 s) via \textbf{16-thread data-parallel} ultrasound beamforming with SIMD intrinsics and memory optimizations (\texttt{restrict}, \texttt{single-write}); validated correctness (RMS error < 1e-16) and scalability (1–16 threads) — a paradigm relevant to \textbf{data-parallel LLM training}.}\href{https://github.com/YueFei0403/ece1755/blob/main/assignment1_code/beamform_mt.c}{[Code]}
+  \myItem{Designed and verified a \textbf{3-hop directory cache-coherence protocol} (MSI/MESI) in Mur$\phi$; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions (\textbf{0 MB} overhead vs 80 MB baseline), formalized \textbf{7 invariants} (e.g., single-writer ownership), and handled FSM edge-case scenarios for large-scale shared-memory systems.}\href{https://github.com/YueFei0403/Murphi3.1-CacheCoherence/tree/main/ece1755_sample}{[Code]}
 \itemListEnd
 }
 
@@ -205,12 +205,12 @@ Network}”}
 }{
 \projHeading{Graph-Based Error-Correcting Codes}{Sep. 2023 -- Dec. 2023}
 \itemListStart
-  \myItem{Implemented \textbf{LDPC}, fountain/LT, and \textbf{Polar encoders/decoders} over binary-erasure channel; developed custom simulators in Julia and MATLAB.}
+  \myItem{Implemented \textbf{LDPC}, fountain/LT, and \textbf{Polar encoders/decoders} over binary-erasure channel; developed custom simulators in Julia and MATLAB.}\href{https://github.com/YueFei0403/ECE1508-Graphs-Codes-and-Inference}{[Code]}
 \itemListEnd
 
 \projHeading{Convolutional Codes \& Viterbi Decoder}{Jan. 2023 -- May. 2023}
 \itemListStart
-  \myItem{Built a rate-½ \textbf{convolutional encoder} and \textbf{Viterbi decoder} in MATLAB with custom trellis structures; validated against built-in tools and demonstrated 2-bit-error correction on a noisy BSC channel.}
+  \myItem{Built a rate-½ \textbf{convolutional encoder} and \textbf{Viterbi decoder} in MATLAB with custom trellis structures; validated against built-in tools and demonstrated 2-bit-error correction on a noisy BSC channel.}\href{https://github.com/YueFei0403/ECE1501-ErrorControlCodes}{Code}
 \itemListEnd
 }
 
@@ -221,7 +221,7 @@ Network}”}
 }{
 \projHeading{Computer Architecture Coursework}{Sep. 2021 -- Dec. 2021}
 \itemListStart
-  \myItem{Developed a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding}, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
+  \myItem{Developed a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding}, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}\href{https://github.com/YueFei0403/ECE552-labs/blob/main/lab3/simplesim-3.0d-assig3/tomasulo.c}{[Code]}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
 \itemListEnd
 }
 
