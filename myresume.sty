@@ -1,0 +1,158 @@
+%-------------------------------------
+% Resum in LaTeX (XeLaTeX)
+% Author:  HF Yuan
+% Project: https://github.com/xyz-yuanhf/yuan-resume
+% Base on: https://github.com/mattyHerzig/mattys_resume
+%          http://www.jianxu.net/en/
+% License: MIT
+%------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+
+% Page size
+\usepackage[top=1.2cm, bottom=2.6cm, left=1.8cm, right=2.3cm, marginparwidth=1.75cm]{geometry}
+
+% Packages
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{fontawesome5}  % for \faPhone, \faEnvelope, \faGithub
+\usepackage{hyperref}      % for clickable links
+\usepackage{truncate}
+% Font style
+\usepackage{fontspec}
+\setmainfont{SabonLTStd}[
+    Path=./Fonts/Sabon/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+\newfontfamily\Calluna{Calluna}[
+    Path=./Fonts/Calluna/,
+    Extension = .otf,
+    UprightFont=*-Regular
+    ]
+\newfontfamily\Courier{CourierNew}[
+    Path=./Fonts/Courier/,
+    Extension = .ttf,
+    UprightFont=*-Regular
+    ]
+\newfontfamily\CronosLt{CronosProLT}[
+    Path=./Fonts/Cronos/,
+    Extension = .ttf,
+    UprightFont=*-Regular
+    ]
+
+% Emph style
+\renewcommand{\emph}[1]{\textbf{\fontsize{11pt}{11pt}\selectfont #1}}
+
+\newlength\SectionLeft
+\setlength\SectionLeft{2.7cm} % left label column width
+
+\newcommand{\sectionBlock}[2]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}p{\SectionLeft}@{\hspace{8pt}}X@{}}%
+    \raggedright #1 & #2%
+  \end{tabularx}\vspace{-2pt}%
+}
+
+
+% Section title
+\titleformat{\section}{
+  \setstretch{1.0}
+  \CronosLt\scshape\raggedright
+  \fontsize{14.5pt}{14.5pt}\selectfont 
+}{}{0em}{}
+% Section title spacing
+\titlespacing*{\section}
+  {0pt}   % Left margin
+  {0pt}   % Space before section
+  {1pt}   % Space after section
+% Section content
+
+% Publication list
+\newcommand{\pubListStart}{\begin{enumerate}[left=0pt, itemsep=3pt, topsep=0pt, parsep=0pt]}
+\newcommand{\pubListEnd}{\end{enumerate}\vspace{-3pt}}
+
+% Award list
+\newcommand{\awardListStart}{\begin{itemize}[leftmargin=*, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]}
+\newcommand{\awardListEnd}{\end{itemize}\vspace{-3pt}}
+
+% Certificate list
+\newcommand{\certificateListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]}
+\newcommand{\certificateListEnd}{\end{itemize}\vspace{-3pt}}
+
+% Skill list
+\newcommand{\skillListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]}
+\newcommand{\skillListEnd}{\end{itemize}\vspace{-3pt}}
+
+% Item list
+\newcommand{\itemListStart}{\begin{itemize}[itemsep=0pt]}
+\newcommand{\itemListEnd}{\end{itemize}}
+\newcommand{\myItem}[1]{
+  \item{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Global width for date column (adjust between 3.0–3.4 cm)
+\newlength\DateCol
+\setlength\DateCol{3.7cm}
+
+% Education
+\newcommand{\eduHeading}[3]{%
+  \renewcommand{\arraystretch}{1.15}%
+  \vspace{-1.5pt}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{\DateCol}@{}}%
+    \textbf{#1} & \\[-1pt]
+    \textit{#2} & \textit{#3} \\
+  \end{tabularx}%
+}
+
+% Job / Internship
+% Job heading: Company – Position on first line, Location on second line with date flush-right
+\newcommand{\jobHeading}[3]{%
+  \renewcommand{\arraystretch}{1.1}%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{\DateCol}@{}}%
+    \textbf{#1} & {\footnotesize\itshape #3} \\   % date can wrap inside p{\DateCol}
+    \textit{#2} & \\
+  \end{tabularx}\vspace{-2pt}%
+}
+
+% Project
+\newcommand{\projHeading}[2]{%
+  \renewcommand{\arraystretch}{1.15}%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{\DateCol}@{}}%
+    \textbf{#1} & \textit{#2} \\
+  \end{tabularx}%
+  \vspace{-3pt}
+}
+
+% Talk
+\newcommand{\talkItem}[4]{%
+  \renewcommand{\arraystretch}{1.15}%
+  \vspace{1pt}%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{\DateCol}@{}}%
+    \textbf{#1} & \textit{#4} \\[3pt]
+    \hspace*{1.5em}\parbox[t]{0.84\linewidth}{\textit{#2}} & \\[3pt]
+    \hspace*{1.5em}\textit{#3} & \\
+  \end{tabularx}%
+  \vspace{-1pt}%
+}
+
+% -------- Helper macro to truncate text --------
+\newcommand{\truncateTitle}[1]{%
+  \makebox[0pt][l]{\ifdim\widthof{#1}>0.78\linewidth
+      \truncate{0.78\linewidth}{#1}%
+    \else
+      #1%
+    \fi}%
+}
+
+
+\definecolor{myblue}{RGB}{0,76,153} % deep blue

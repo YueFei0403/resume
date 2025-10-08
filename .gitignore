@@ -4,6 +4,8 @@
 # Keep TeX and PDF files
 !*.tex
 !*.pdf
+!Makefile
+!*.sty
 
 # Keep the Fonts directory and all its contents
 !Fonts/
