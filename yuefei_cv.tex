@@ -109,14 +109,14 @@ Network}”}
 \section{Technical Skills}
 }{
 \skillListStart
-\item \textbf{Programming:} Python, MySQL/Pandas, C/C++, MATLAB, Julia, Arm Assembly, Verilog/SystemVerilog, Unix/Linux Shell, Perl
+\item \textbf{Programming:} Python, Pandas, C/C++, MATLAB, Julia, Arm Assembly, Verilog/SystemVerilog, Unix/Linux Shell, Perl
 \item \textbf{Data Processing \& Automation:} CI/CD (Jenkins) pipelines; Makefile
-\item \textbf{ML \& Optimization:} PyTorch, GRU-RNN, MLP, Attention mechanism \& visualization \href{https://github.com/YueFei0403/attn_nmt_visualize/blob/main/Final_Report_2021_08_30.pdf}{[Code]}, Q-Learning (Reinforcement Learning), Convex Optimization (fractional \& quadratic-transform), Sampling-based Source Coding
+\item \textbf{ML \& Optimization:} Scikit-learn, PyTorch, Stable-Baselines3 \& Gymnasium for Reinforcement Learning (RL), GRU-RNN, MLP, Attention mechanism \& visualization \href{https://github.com/YueFei0403/attn_nmt_visualize/blob/main/Final_Report_2021_08_30.pdf}{[Code]}, Q-Learning (Reinforcement Learning), Convex Optimization (fractional \& quadratic-transform), Sampling-based Source Coding
 \item \textbf{Parallel Programming:} \textbf{Multithreading} (OpenMP-style loops, SIMD), \textbf{multi-queue scheduling}
-\item \textbf{Tools \& Environments:} Git, Linux/Unix shells, Vim/GVim, SimpleScalar simulators
-
+\item \textbf{Tools \& Environments:} Git, Vim/GVim, SimpleScalar simulators
 \skillListEnd
 }
+
 
 % -------------------- INDUSTRY EXPERIENCE --------------------
 \sectionBlock{
@@ -170,22 +170,6 @@ Network}”}
 \itemListEnd
 }
 
-% ---------- Signal Processing ----------
-\sectionBlock{
-{\textbf{Signal Processing}\\[-2pt]
-\scriptsize Estimation and detection for modern wireless systems}
-}{
-\projHeading{Angle of Arrival (AoA) \& Channel Estimation}{Jan. 2023 -- May. 2023}
-\itemListStart
-  \myItem{Implemented \textbf{MUSIC}, \textbf{DFT}, and \textbf{Matrix-Pencil} eigenvalue methods in MATLAB for AoA estimation under large-scale and Rayleigh-fading channels; \textbf{Matrix-Pencil delivered ≈2 dB gain in low-SNR regimes with 16-antenna arrays}, outperforming MUSIC and DFT for highly-correlated signals.}
-\itemListEnd
-
-\projHeading{LTE Signal Processing}{Jan. 2024 -- Apr. 2024}
-\itemListStart
-  \myItem{Processed captured LTE signals for \textbf{time/frequency sync}, \textbf{OFDM demodulation}, and \textbf{pilot-power analysis} in MATLAB; resampled 40 MHz front-end data to 30.72 MHz LTE rate and validated \textbf{PSS/SSS} detection.}
-\itemListEnd
-}
-
 % ---------- Parallel / HPC ----------
 \sectionBlock{
 {\textbf{Parallel \& HPC}\\[-2pt]
@@ -195,6 +179,17 @@ Network}”}
 \itemListStart
   \myItem{Accelerated medical-imaging by \textbf{7×} (17 s $\rightarrow$ 2.5 s) via \textbf{16-thread data-parallel} ultrasound beamforming with SIMD intrinsics and memory optimizations (\texttt{restrict}, \texttt{single-write}); validated correctness (RMS error < 1e-16) and scalability (1–16 threads) — a paradigm relevant to \textbf{data-parallel LLM training}.}\href{https://github.com/YueFei0403/ece1755/blob/main/assignment1_code/beamform_mt.c}{[Code]}
   \myItem{Designed and verified a \textbf{3-hop directory cache-coherence protocol} (MSI/MESI) in Mur$\phi$; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions (\textbf{0 MB} overhead vs 80 MB baseline), formalized \textbf{7 invariants} (e.g., single-writer ownership), and handled FSM edge-case scenarios for large-scale shared-memory systems.}\href{https://github.com/YueFei0403/Murphi3.1-CacheCoherence/tree/main/ece1755_sample}{[Code]}
+\itemListEnd
+}
+
+% ---------- Architecture ----------
+\sectionBlock{
+{\textbf{Computer Architecture}\\[-2pt]
+\scriptsize Speculation mechanisms relevant to LLM decoding}
+}{
+\projHeading{Computer Architecture Coursework}{Sep. 2021 -- Dec. 2021}
+\itemListStart
+  \myItem{Developed a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding}, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}\href{https://github.com/YueFei0403/ECE552-labs/blob/main/lab3/simplesim-3.0d-assig3/tomasulo.c}{[Code]}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
 \itemListEnd
 }
 
@@ -220,16 +215,22 @@ Network}”}
 
 }
 
-% ---------- Architecture ----------
+% ---------- Signal Processing ----------
 \sectionBlock{
-{\textbf{Computer Architecture}\\[-2pt]
-\scriptsize Speculation mechanisms relevant to LLM decoding}
+{\textbf{Signal Processing}\\[-2pt]
+\scriptsize Estimation and detection for modern wireless systems}
 }{
-\projHeading{Computer Architecture Coursework}{Sep. 2021 -- Dec. 2021}
+\projHeading{Angle of Arrival (AoA) \& Channel Estimation}{Jan. 2023 -- May. 2023}
 \itemListStart
-  \myItem{Developed a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding}, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}\href{https://github.com/YueFei0403/ECE552-labs/blob/main/lab3/simplesim-3.0d-assig3/tomasulo.c}{[Code]}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
+  \myItem{Implemented \textbf{MUSIC}, \textbf{DFT}, and \textbf{Matrix-Pencil} eigenvalue methods in MATLAB for AoA estimation under large-scale and Rayleigh-fading channels; \textbf{Matrix-Pencil delivered ≈2 dB gain in low-SNR regimes with 16-antenna arrays}, outperforming MUSIC and DFT for highly-correlated signals.}
+\itemListEnd
+
+\projHeading{LTE Signal Processing}{Jan. 2024 -- Apr. 2024}
+\itemListStart
+  \myItem{Processed captured LTE signals for \textbf{time/frequency sync}, \textbf{OFDM demodulation}, and \textbf{pilot-power analysis} in MATLAB; resampled 40 MHz front-end data to 30.72 MHz LTE rate and validated \textbf{PSS/SSS} detection.}
 \itemListEnd
 }
+
 
 \end{document}
 
