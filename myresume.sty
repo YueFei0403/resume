@@ -8,7 +8,6 @@
 %------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-
 % Page size
 \usepackage[top=1.2cm, bottom=2.6cm, left=1.8cm, right=2.3cm, marginparwidth=1.75cm]{geometry}
 
@@ -49,7 +48,7 @@
     ]
 
 % Emph style
-\renewcommand{\emph}[1]{\textbf{\fontsize{11pt}{11pt}\selectfont #1}}
+\renewcommand{\emph}[1]{\textbf{\fontsize{10pt}{10pt}\selectfont #1}}
 
 \newlength\SectionLeft
 \setlength\SectionLeft{2.7cm} % left label column width
@@ -58,7 +57,7 @@
   \noindent
   \begin{tabularx}{\textwidth}{@{}p{\SectionLeft}@{\hspace{8pt}}X@{}}%
     \raggedright #1 & #2%
-  \end{tabularx}\vspace{-2pt}%
+  \end{tabularx}%
 }
 
 
@@ -76,28 +75,26 @@
 % Section content
 
 % Publication list
-\newcommand{\pubListStart}{\begin{enumerate}[left=0pt, itemsep=3pt, topsep=0pt, parsep=0pt]}
-\newcommand{\pubListEnd}{\end{enumerate}\vspace{-3pt}}
+\newcommand{\pubListStart}{\begin{enumerate}[left=0pt, itemsep=1pt, topsep=0pt, parsep=0pt]}
+\newcommand{\pubListEnd}{\end{enumerate}\vspace{-1pt}}
 
 % Award list
 \newcommand{\awardListStart}{\begin{itemize}[leftmargin=*, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]}
-\newcommand{\awardListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\awardListEnd}{\end{itemize}\vspace{-1pt}}
 
 % Certificate list
 \newcommand{\certificateListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]}
-\newcommand{\certificateListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\certificateListEnd}{\end{itemize}\vspace{-1pt}}
 
 % Skill list
 \newcommand{\skillListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]}
-\newcommand{\skillListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\skillListEnd}{\end{itemize}\vspace{-1pt}}
 
 % Item list
-\newcommand{\itemListStart}{\begin{itemize}[itemsep=0pt]}
-\newcommand{\itemListEnd}{\end{itemize}}
+\newcommand{\itemListStart}{\begin{itemize}[itemsep=1pt, topsep=0pt]} % tighter
+\newcommand{\itemListEnd}{\end{itemize}\vspace{1pt}}
 \newcommand{\myItem}[1]{
-  \item{
-    {#1 \vspace{-2pt}}
-  }
+  \item{{#1}}
 }
 
 % Global width for date column (adjust between 3.0–3.4 cm)
@@ -121,7 +118,7 @@
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{\DateCol}@{}}%
     \textbf{#1} & {\footnotesize\itshape #3} \\   % date can wrap inside p{\DateCol}
     \textit{#2} & \\
-  \end{tabularx}\vspace{-2pt}%
+  \end{tabularx}%
 }
 
 % Project
@@ -130,7 +127,6 @@
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{\DateCol}@{}}%
     \textbf{#1} & \textit{#2} \\
   \end{tabularx}%
-  \vspace{-3pt}
 }
 
 % Talk
@@ -142,7 +138,6 @@
     \hspace*{1.5em}\parbox[t]{0.84\linewidth}{\textit{#2}} & \\[3pt]
     \hspace*{1.5em}\textit{#3} & \\
   \end{tabularx}%
-  \vspace{-1pt}%
 }
 
 % -------- Helper macro to truncate text --------

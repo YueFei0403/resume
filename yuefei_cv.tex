@@ -29,7 +29,7 @@
   {\Calluna \fontsize{14.5pt}{14.5pt}\selectfont \textsc{she/her}} \\[4pt]
 
   % Tagline
-  {\small \textit{Machine-Learning • Parallel Programming • Signal Processing • Error-Control Codes}} 
+  {\small \textit{Communication Systems \& Digital Design \&  Computer Architecture}} 
 
   % Divider line
   \noindent\rule{\textwidth}{0.1pt}
@@ -68,31 +68,22 @@ Network}”}
 }{
 \pubListStart
 \justifying
-\item Arash Ahmadian, Louis S.P. Liu, \underline{\textbf{Yue Fei}}, Konstantinos N. Plataniotis; Mahdi S. Hosseini. \href{https://ieeexplore.ieee.org/document/10097215/}{Pseudo-Inverted Bottleneck Convolution for Darts Search Space}. \textit{IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 2023.
-\item Abnash Bassi, \underline{\textbf{Yue Fei}}, Gilead Posluns, Mark C. Jeffrey. Optimized Priority Scheduling for Faster Scalable Belief Propagation. \textit{The Association for the Advancement of Artificial Intelligence (AAAI) [In Submission]}, 2026.
+\item Arash Ahmadian, Louis S.P. Liu, \textbf{Yue Fei}, Konstantinos N. Plataniotis; Mahdi S. Hosseini. \href{https://ieeexplore.ieee.org/document/10097215/}{Pseudo-Inverted Bottleneck Convolution for Darts Search Space}. \textit{IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 2023.
+\item Abnash Bassi, \textbf{Yue Fei}, Gilead Posluns, Mark C. Jeffrey. Optimized Priority Scheduling for Faster Scalable Belief Propagation. \textit{The Association for the Advancement of Artificial Intelligence (AAAI) [In Submission]}, 2026.
 \pubListEnd
 }
 
-% -------------------- AWARDS & HONORS --------------------
+% -------------------- AWARDS & HONORS & CERTIFICATES --------------------
 \sectionBlock{
-\section{Awards and Honors}
+\section{Awards, Honors and Certificates}
 }{
 \awardListStart
 \justifying
-\item \emph{Dean's Honour List}  \hfill \textit{2017 Fall, 2018 Winter, 2018 Fall, 2021 Fall, \& 2022 Winter}
-\item \emph{Edward S. Rogers Sr. Department Betz Entrance Scholarship (\$5,000)} \hfill \textit{2017}
+\item \emph{Edward S. Rogers Sr. Department Betz Entrance Scholarship (\$5,000)} \hfill \textit{2017}\vspace{1pt}
+\item \emph{Dean's Honour List}  \hfill \textit{2017 Fall, 2018 Winter, 2018 Fall, 2021 Fall, \& 2022 Winter}\vspace{1pt}
+\item \emph{Certificate in Engineering Business}  \hfill \textit{Jun. 2022}
 \awardListEnd
 }
-
-% -------------------- Certificate --------------------
-\sectionBlock{
-\section{Certificate}
-}{
-\certificateListStart
-\item \emph{Certificate in Engineering Business}  \hfill \textit{Jun. 2022}
-\certificateListEnd
-}
-
 % -------------------- TALKS --------------------
 \sectionBlock{
 \section{Invited Talks}
@@ -116,13 +107,12 @@ Network}”}
 \item \textbf{Tools \& Environments:} Git, Vim/GVim, SimpleScalar simulators
 \skillListEnd
 }
-
-
+\vspace{-10pt}
 % -------------------- INDUSTRY EXPERIENCE --------------------
 \sectionBlock{
 \section{Industry Experience}
 }{
-\vspace{0.5pt}
+\vspace{1pt}
 \jobHeading
   {Qualcomm – Design Verification Engineer}{Markham, Canada}{Jun. 2024 -- Jul. 2025}
 \itemListStart
@@ -138,16 +128,70 @@ Network}”}
   \myItem{Enhanced CI/CD automation to support \textbf{15× growth} in regression testing (scaling from \textbf{4 to 60+ projects}), improving efficiency and reliability as the company expanded.}
 \itemListEnd
 }
-
-
+\vspace{-8pt}
 % ----------------- Selected Projects -----------------
 \sectionBlock{
 \section{Selected Projects}
 }{
 \vspace{0.5pt}
-{\small Highlighted academic, research, and technical projects spanning ML, optimization, signal processing, HPC, and architecture.}
+{\small Highlighted academic, research, and technical projects spanning ML, optimization, signal processing and hardware designs.}
 }
 
+% ---------- Parallel / HPC ----------
+\sectionBlock{
+{\textbf{Digital Design \& Computer Architecture}\\[-2pt]
+\scriptsize RTL design, parallel computing and memory-coherence protocols}
+}{
+\projHeading{Undergraduate Capstone Project (Team of 4)}{Sep. 2021 -- Apr. 2022}
+\itemListStart
+  \myItem{Collaborated to extend Microsoft Brainwave NPU on Intel Stratix 10 NX FPGA by replacing its matrix–vector unit with a \textbf{custom convolution unit (scheduler + tiles + accumulator)}, achieving \textbf{4.3×} speedup and \textbf{76.6 GOP/s} on MobileNetV1 inference.}
+  \myItem{Designed a \textbf{pipelined accumulator} enabling 330 MHz operation; implemented three-stage \textbf{reduction-tree addition} and \textbf{opcode-based accumulation modes}, verified correct synchronization and 450 MHz Fmax in Quartus.}
+\itemListEnd
+\projHeading{Computer Architecture Coursework (Team of 2)}{Sep. 2021 -- Dec. 2021}
+\itemListStart
+  \myItem{Collaborated to model \textbf{hazard detection} in a \textbf{MIPS}-based 5-stage pipelined CPU, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}\href{https://github.com/YueFei0403/ECE552-labs/blob/main/lab3/simplesim-3.0d-assig3/tomasulo.c}{[Code]}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
+\itemListEnd
+\projHeading{Parallel Beamforming \& Cache-Coherence Foundations for Scalable Compute}{Jan. 2024 -- May. 2024}
+\itemListStart
+  \myItem{Accelerated medical-imaging by \textbf{7×} (17 s $\rightarrow$ 2.5 s) via \textbf{16-thread data-parallel} ultrasound beamforming with SIMD intrinsics and memory optimizations (\texttt{restrict}, \texttt{single-write}); validated correctness (RMS error < 1e-16) and scalability (1–16 threads) — a paradigm relevant to \textbf{data-parallel LLM training}.}\href{https://github.com/YueFei0403/ece1755/blob/main/assignment1_code/beamform_mt.c}{[Code]}
+  \myItem{Designed and verified a \textbf{3-hop directory cache-coherence protocol} (MSI/MESI) in Mur$\phi$; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions.}\href{https://github.com/YueFei0403/Murphi3.1-CacheCoherence/tree/main/ece1755_sample}{[Code]}
+\itemListEnd
+}
+
+% ---------- Coding Theory ----------
+\sectionBlock{
+{\textbf{Coding Theory}\\[-2pt]
+\scriptsize Error-correcting codes for reliable communications}
+}{
+\projHeading{Graph-Based Error-Correcting Codes}{Sep. 2023 -- Dec. 2023}
+\itemListStart
+  \myItem{Implemented \textbf{LDPC}, fountain/LT, and \textbf{Polar encoders/decoders} over binary-erasure channel; developed custom simulators in Julia and MATLAB.}\href{https://github.com/YueFei0403/ECE1508-Graphs-Codes-and-Inference}{[Code]}
+\itemListEnd
+\projHeading{Convolutional Codes \& Viterbi Decoder}{Jan. 2023 -- May. 2023}
+\itemListStart
+  \myItem{Built a rate-½ \textbf{convolutional encoder} and \textbf{Viterbi decoder} in MATLAB with custom trellis structures; validated against built-in tools and demonstrated 2-bit-error correction on a noisy BSC channel.}\href{https://github.com/YueFei0403/ECE1501-ErrorControlCodes}{[Code]}
+\itemListEnd
+\projHeading{BCH Codes \& Extended Euclidean Algorithm}{Jan. 2023 -- May. 2023}
+\itemListStart
+  \myItem{Developed a \textbf{binary BCH encoder/decoder} over \(GF(2^m)\), applying the \textbf{extended Euclidean algorithm} to solve the key equation for syndrome decoding and implementing Chien search for error location.}\href{https://github.com/YueFei0403/ECE1501-ErrorControlCodes}{[Code]}
+\itemListEnd
+}
+
+% ---------- Signal Processing ----------
+\sectionBlock{
+{\textbf{Signal Processing}\\[-2pt]
+\scriptsize Estimation and detection for modern wireless systems}
+}{
+\projHeading{Master of Engineering Project}{2024}
+\itemListStart
+  \myItem{Compared \textbf{Linear Minimum Mean Square Error (LMMSE)} approach and \textbf{Matrix-Pencil Method (MPM)} for uplink channel estimation in \textbf{multicell MIMO-OFDM systems} with four distributed units (DUs) arranged in a square of radius 100 m, using a 3GPP-compliant MATLAB model.}
+  \myItem{Showed that with \textbf{pilot training} in time or frequency domain, MPM yields higher angle-of-arrival accuracy than DFT-based and MMSE methods even with only eight receiver antennas.}
+\itemListEnd
+\projHeading{LTE Signal Processing}{Jan. 2022 -- Apr. 2022}
+\itemListStart
+  \myItem{Processed captured LTE signals for \textbf{time/frequency sync}, \textbf{OFDM demodulation}, and \textbf{channel equalization} in MATLAB; resampled 40 MHz front-end data to 30.72 MHz LTE rate and validated \textbf{PSS/SSS} detection.}
+\itemListEnd
+}
 % ---------- ML & Optimization ----------
 \sectionBlock{
 {\textbf{ML \& Optimization}\\[-2pt]
@@ -167,67 +211,6 @@ Network}”}
 \itemListStart
   \myItem{Explored \textbf{RNN-based Transformer models} and \textbf{Attention mechanisms} for NLP tasks .}
   \myItem{Applied \textbf{PCA-based embedding visualization}—as used in \textbf{GloVe}—to project high-dimensional embeddings into \textbf{2D/3D space} using \textbf{Python (NumPy, Matplotlib)}, enabling intuitive inspection of semantic clusters.}
-\itemListEnd
-}
-
-% ---------- Parallel / HPC ----------
-\sectionBlock{
-{\textbf{Parallel \& HPC}\\[-2pt]
-\scriptsize Multi-threaded acceleration and memory-coherence design}
-}{
-\projHeading{Parallel Beamforming \& Cache-Coherence Foundations for Scalable Compute}{Jan. 2024 -- May. 2024}
-\itemListStart
-  \myItem{Accelerated medical-imaging by \textbf{7×} (17 s $\rightarrow$ 2.5 s) via \textbf{16-thread data-parallel} ultrasound beamforming with SIMD intrinsics and memory optimizations (\texttt{restrict}, \texttt{single-write}); validated correctness (RMS error < 1e-16) and scalability (1–16 threads) — a paradigm relevant to \textbf{data-parallel LLM training}.}\href{https://github.com/YueFei0403/ece1755/blob/main/assignment1_code/beamform_mt.c}{[Code]}
-  \myItem{Designed and verified a \textbf{3-hop directory cache-coherence protocol} (MSI/MESI) in Mur$\phi$; optimized with \textbf{Exclusive (E)} state to eliminate bus transactions (\textbf{0 MB} overhead vs 80 MB baseline).}\href{https://github.com/YueFei0403/Murphi3.1-CacheCoherence/tree/main/ece1755_sample}{[Code]}
-\itemListEnd
-}
-
-% ---------- Architecture ----------
-\sectionBlock{
-{\textbf{Computer Architecture}\\[-2pt]
-\scriptsize Speculation mechanisms relevant to LLM decoding}
-}{
-\projHeading{Computer Architecture Coursework}{Sep. 2021 -- Dec. 2021}
-\itemListStart
-  \myItem{Developed a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding}, implemented a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}\href{https://github.com/YueFei0403/ECE552-labs/blob/main/lab3/simplesim-3.0d-assig3/tomasulo.c}{[Code]}, \textbf{Bouquet prefetcher}, and \textbf{MSI-directory cache-coherence protocol}; these experiences deepened my understanding of \textbf{pipeline parallelism for distributed LLM training} and how \textbf{speculative execution} in CPUs parallels \textbf{LLM speculative decoding} for faster inference.}
-\itemListEnd
-}
-
-% ---------- Coding Theory ----------
-\sectionBlock{
-{\textbf{Coding Theory}\\[-2pt]
-\scriptsize Error-correcting codes for reliable communications}
-}{
-\projHeading{Graph-Based Error-Correcting Codes}{Sep. 2023 -- Dec. 2023}
-\itemListStart
-  \myItem{Implemented \textbf{LDPC}, fountain/LT, and \textbf{Polar encoders/decoders} over binary-erasure channel; developed custom simulators in Julia and MATLAB.}\href{https://github.com/YueFei0403/ECE1508-Graphs-Codes-and-Inference}{[Code]}
-\itemListEnd
-
-\projHeading{Convolutional Codes \& Viterbi Decoder}{Jan. 2023 -- May. 2023}
-\itemListStart
-  \myItem{Built a rate-½ \textbf{convolutional encoder} and \textbf{Viterbi decoder} in MATLAB with custom trellis structures; validated against built-in tools and demonstrated 2-bit-error correction on a noisy BSC channel.}\href{https://github.com/YueFei0403/ECE1501-ErrorControlCodes}{[Code]}
-\itemListEnd
-
-\projHeading{BCH Codes \& Extended Euclidean Algorithm}{Jan. 2023 -- May. 2023}
-\itemListStart
-  \myItem{Developed a \textbf{binary BCH encoder/decoder} over \(GF(2^m)\), applying the \textbf{extended Euclidean algorithm} to solve the key equation for syndrome decoding and implementing Chien search for error location.}\href{https://github.com/YueFei0403/ECE1501-ErrorControlCodes}{[Code]}
-\itemListEnd
-
-}
-
-% ---------- Signal Processing ----------
-\sectionBlock{
-{\textbf{Signal Processing}\\[-2pt]
-\scriptsize Estimation and detection for modern wireless systems}
-}{
-\projHeading{Angle of Arrival (AoA) \& Channel Estimation}{Jan. 2023 -- May. 2023}
-\itemListStart
-  \myItem{Implemented \textbf{MUSIC}, \textbf{DFT}, and \textbf{Matrix-Pencil} eigenvalue methods in MATLAB for AoA estimation under large-scale and Rayleigh-fading channels; \textbf{Matrix-Pencil delivered ≈2 dB gain in low-SNR regimes with 16-antenna arrays}, outperforming MUSIC and DFT for highly-correlated signals.}
-\itemListEnd
-
-\projHeading{LTE Signal Processing}{Jan. 2022 -- Apr. 2022}
-\itemListStart
-  \myItem{Processed captured LTE signals for \textbf{time/frequency sync}, \textbf{OFDM demodulation}, and \textbf{pilot-power analysis} in MATLAB; resampled 40 MHz front-end data to 30.72 MHz LTE rate and validated \textbf{PSS/SSS} detection.}
 \itemListEnd
 }
 

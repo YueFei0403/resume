@@ -1,0 +1,179 @@
+%-------------------------------------
+% Resume tuned for RBC Machine-Learning Software Engineer
+%-------------------------------------
+
+\documentclass[a4paper, 10pt]{article}
+\usepackage{myresume}
+
+\begin{document}
+
+% -------------------- HEADING --------------------
+\begin{flushright}
+  \setstretch{0.8}
+  \item {\faGraduationCap\ \href{https://scholar.google.ca/citations?user=AYYyliAAAAAJ}{\textcolor{myblue}{Google Scholar}}}
+  \item {\faGithub\ \href{https://github.com/YueFei0403}{\textcolor{myblue}{github.com/YueFei0403}}}
+  \item {\faEnvelope\ \textcolor{myblue}{yuefei9943@gmail.com}}
+  \item {\faPhone\ \textcolor{myblue}{(+1) 647-866-7311}}
+\end{flushright}\vspace{-40pt}
+
+\begin{flushleft}
+  {\Calluna \fontsize{30pt}{30pt}\selectfont \textsc{Yue Fei}}
+  \quad
+  {\Calluna \fontsize{14.5pt}{14.5pt}\selectfont \textsc{she/her}} \\[4pt]
+
+  {\small \textit{Machine-Learning \& Signal Processing • Parallel Programming • Data Analysis Pipelines}}
+
+  \noindent\rule{\textwidth}{0.1pt}
+\end{flushleft}
+
+% -------------------- EDUCATION --------------------
+\sectionBlock{
+\section{Education}
+}{
+\eduHeading{University of Toronto}{Master of Engineering, Electrical Engineering}{Sep.\ 2022 -- Jun.\ 2024}
+\itemListStart
+  \myItem{Emphasis: Communications}
+  \myItem{Advisor: \href{https://www.comm.utoronto.ca/~rsadve/}{Prof.\ Raviraj Adve}}
+  \myItem{MEng Thesis: “\href{https://github.com/YueFei0403/UMa_5G_AoA}{Pilot Training – Angle of Arrival \& Channel Estimation in 5G Network}”}
+\itemListEnd
+
+\eduHeading{University of Toronto}{Bachelor of Applied Science, Electrical Engineering}{Sep.\ 2017 -- Jun.\ 2022}
+\itemListStart
+  \myItem{Capstone Project: Convolutional Neural Network (CNN) NPU Overlay (MobileNet V1) for FPGA (Intel Stratix-10 NX 2100)}
+  \myItem{Advisors: \href{https://www.eecg.utoronto.ca/~vaughn/}{Prof.\ Vaughn Betz} and \href{https://andrewboutros.github.io/}{Andrew Boutros}}
+\itemListEnd
+}
+
+% -------------------- PUBLICATIONS --------------------
+\sectionBlock{
+\section{Publications\\(Peer-Reviewed Conference)}
+}{
+\pubListStart
+\item Arash Ahmadian, Louis S.P. Liu, \underline{\textbf{Yue Fei}}, Konstantinos N. Plataniotis; Mahdi S. Hosseini. \href{https://ieeexplore.ieee.org/document/10097215/}{Pseudo-Inverted Bottleneck Convolution for DARTS Search Space}. \textit{IEEE ICASSP}, 2023.
+\item Abnash Bassi, \underline{\textbf{Yue Fei}}, Gilead Posluns, Mark C. Jeffrey. Optimized Priority Scheduling for Faster Scalable Belief Propagation. \textit{AAAI [In Submission]}, 2026.
+\pubListEnd
+}
+
+% -------------------- AWARDS --------------------
+\sectionBlock{
+\section{Awards and Honors}
+}{
+\awardListStart
+\item \emph{Dean’s Honour List} \hfill \textit{2017 Fall, 2018 Winter, 2018 Fall, 2021 Fall, \& 2022 Winter}
+\item \emph{Edward S. Rogers Sr. Department Betz Entrance Scholarship (\$5,000)} \hfill \textit{2017}
+\awardListEnd
+}
+
+% -------------------- CERTIFICATE --------------------
+\sectionBlock{
+\section{Certificate}
+}{
+\certificateListStart
+\item \emph{Certificate in Engineering Business} \hfill \textit{Jun.\ 2022}
+\certificateListEnd
+}
+
+% -------------------- TALKS --------------------
+\sectionBlock{
+\section{Invited Talks}
+}{
+\talkItem{Panel: \textit{Demystifying Machine Learning}}
+         {Talk: \textit{From Channels to States — Machine Learning in the Language of Communication and Control}}
+         {QWomen San Diego — Qualcomm Internal Panel Discussion}
+         {Mar.\ 2025}
+}
+
+% -------------------- SKILLS --------------------
+\sectionBlock{
+\section{Technical Skills}
+}{
+\skillListStart
+\item \textbf{Programming:} Python (Pandas, NumPy), C/C++, MATLAB, Julia, Arm Assembly, Verilog/SystemVerilog, Unix/Linux Shell, Perl
+\item \textbf{ML \& Data:} PyTorch, scikit-learn, GRU-RNN, Attention/Transformer, Q-Learning, Convex \& fractional optimization, feature-engineering
+\item \textbf{MLOps \& Data Eng.:} CI/CD (Jenkins), Git, Makefile automation, REST/Flask APIs, Docker (basic), \textbf{HPC thread-pinning \& NUMA-aware scheduling}
+\item \textbf{Parallel \& Distributed:} OpenMP-style multithreading, SIMD optimization, multi-queue schedulers, cache-coherence protocols
+\item \textbf{Tools/Cloud:} Unix/Linux Shell, Vim/GVim, SimpleScalar; \textit{quick to adopt distributed-data frameworks (e.g.\ Spark/Ray/K8s) given HPC background}
+\skillListEnd
+}
+
+% -------------------- INDUSTRY EXPERIENCE --------------------
+\sectionBlock{
+\section{Industry Experience}
+}{
+\jobHeading{Qualcomm – Design Verification / ML Engineer}{Markham, Canada}{Jun.\ 2024 -- Jul.\ 2025}
+\itemListStart
+  \myItem{Built \textbf{multi-head GRU-RNN pipeline} to optimize receiver gain line-up; reduced manual tuning effort for analog designers and \textbf{operationalized ML in hardware workflow}.}
+  \myItem{Designed \textbf{physics-inspired MLP} predicting VCO capacitance for \textbf{1,000+ frequency targets}, eliminating manual capacitor tuning and cutting parameter-search time by > 90\%.}
+  \myItem{Verified \textbf{UWB receiver path}, improving startup latency \textbf{20 ns $\rightarrow$ 2 ns (-90\%)}; validated \textbf{WLAN CP-PLL loop} across \textbf{500+ channel indices} with automated \textbf{UVM test plans}.}
+  \myItem{Integrated models \& regression tests into \textbf{CI/CD (Jenkins)} for reproducible nightly runs and hardware-in-the-loop validation.}
+\itemListEnd
+
+\jobHeading{Alphawave Semi – Digital Verification Engineer}{Toronto, Canada}{May 2020 -- Jun.\ 2021}
+\itemListStart
+  \myItem{Automated \textbf{SerDes datapath \& clocking UVM testbenches}, expanding functional coverage by \textbf{50+ scenarios}.}
+  \myItem{Enhanced \textbf{CI/CD pipelines} to support \textbf{15× growth} in regression jobs (4 $\rightarrow$ 60+ projects), improving release velocity and reliability.}
+\itemListEnd
+}
+
+% -------------------- PROJECTS --------------------
+\sectionBlock{
+\section{Selected Projects}
+}{
+\vspace{2pt}
+{\small Highlighted academic, research, and technical projects spanning optimization, signal processing, and computer architecture.}
+}
+
+% ---------- Parallel & HPC ----------
+\sectionBlock{
+{\textbf{Parallel \& HPC}\\[-2pt]
+\scriptsize Multi-threaded acceleration and memory-coherence design}
+}{
+\projHeading{Parallel Beamforming \& Cache-Coherence for Scalable Compute}{Jan.\ 2024 -- May 2024}
+\itemListStart
+  \myItem{Achieved \textbf{7× speed-up (17 s $\rightarrow$ 2.5 s)} on ultrasound beamforming via \textbf{SIMD intrinsics \& memory-locality optimization}; validated scaling (1–16 threads) — relevant to \textbf{data-parallel training/inference}.}
+\itemListEnd
+
+\projHeading{Optimized Priority Scheduling for Belief Propagation}{Summer 2024}
+\itemListStart
+  \myItem{Developed a scalable \textbf{Stealing Multi-Queue (SMQ)} scheduler with \textbf{lazy priority updates} for asynchronous belief propagation, cutting locking overhead and improving cache locality; achieved up to \textbf{1.9× faster} than traditional MQ and \textbf{32× geomean speed-up} over sequential BP at 48 threads, while preserving convergence and work-efficiency — relevant to \textbf{fraud-graph \& transaction-risk ML models}.}
+\itemListEnd
+}
+
+% ---------- ML & Optimization ----------
+\sectionBlock{
+{\textbf{Optimization}\\[-2pt]
+\scriptsize Modeling and constrained optimization for wireless networks}
+}{
+\projHeading{Convex \& Fractional Programming for Multi-Cell MIMO Beamforming}{Sep.\ 2023 -- Dec.\ 2023}
+\itemListStart
+  \myItem{Applied \textbf{fractional-programming \& quadratic-transform} to improve constrained sum-rate optimization — transferrable to \textbf{portfolio-style resource-allocation} problems.}
+\itemListEnd
+}
+
+% ---------- Coding Theory ----------
+\sectionBlock{
+{\textbf{Coding Theory}\\[-2pt]
+\scriptsize Error-correcting codes for reliable digital communications}
+}{
+\projHeading{Graph-Based Error-Correcting Codes}{Sep.\ 2023 -- Dec.\ 2023}
+\itemListStart
+  \myItem{Implemented \textbf{LDPC}, \textbf{Fountain/LT}, and \textbf{Polar} encoders/decoders over binary erasure channel (BEC), binary symmetric channel (BSC), and binary additive white Gaussian noise channel (BI-AWGN); built custom simulators in Julia and MATLAB to demonstrate \textbf{graph-structured, ML-style decoding}.}
+\itemListEnd
+}
+
+% ---------- Computer Architecture ----------
+\sectionBlock{
+{\textbf{Computer Architecture}\\[-2pt]
+\scriptsize Systems-level C/C++ implementations demonstrating pipeline parallelism \& speculation}
+}{
+\projHeading{Computer Architecture Coursework}{Sep.\ 2021 -- Dec.\ 2021}
+\itemListStart
+  \myItem{Implemented in \textbf{C/C++} a \textbf{5-stage pipelined CPU} with \textbf{hazard detection \& forwarding},
+          a \textbf{perceptron-based branch predictor}, \textbf{Tomasulo out-of-order execution}\href{https://github.com/YueFei0403/ECE552-labs/blob/main/lab3/simplesim-3.0d-assig3/tomasulo.c}{[Code]},
+          \textbf{Bouquet prefetcher}, and an \textbf{MSI-directory cache-coherence protocol}.}
+  \myItem{Gained hands-on experience with \textbf{pipeline parallelism}, \textbf{speculative execution}, and \textbf{cache-coherence} — concepts that parallel large-scale distributed ML inference \& speculative decoding in LLMs.}
+\itemListEnd
+}
+
+
+\end{document}

@@ -1,5 +1,6 @@
-# Automatically pick the first .tex file in the current directory
-TEXFILE := $(basename $(wildcard *.tex))
+# If user passes TEXFILE=name on command-line, use it;
+# otherwise pick the first .tex file in current directory (without extension)
+TEXFILE ?= $(basename $(firstword $(wildcard *.tex)))
 
 # Default target
 all: $(TEXFILE).pdf
@@ -7,11 +8,12 @@ all: $(TEXFILE).pdf
 # Build PDF
 $(TEXFILE).pdf: $(TEXFILE).tex
 	xelatex $(TEXFILE).tex
-	xelatex $(TEXFILE).tex    # run twice for cross-references
+	xelatex $(TEXFILE).tex     # run twice for cross-refs (TOC, etc.)
 
-# Clean up auxiliary files
+# Remove auxiliary LaTeX files
 clean:
 	rm -f *.aux *.log *.toc *.out *.bbl *.blg *.synctex.gz
 
+# Remove everything including the PDF
 distclean: clean
 	rm -f $(TEXFILE).pdf
